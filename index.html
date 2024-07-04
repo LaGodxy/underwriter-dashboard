@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./dist/output.css" rel="stylesheet">
+</head>
+
+<body class="bg-[#FFFBF6] font-sans">
+    <div class="flex">
+        <!-- Left SECTION -->
+        <div
+            class="w-full flex-col justify-center bg-[#fffbf6] pl-[50px] pt-[30px] pr-[50px] sm:pl-[20px] sm:pr-[10px] sm:w-1/2 md:pl-[60px] md:pt-[40px] lg:pl-[70px] lg:pt-[50px] xl:pl-[80px] xl:pt-[60px] 2xl:pl-[90px] 2xl:pt-[70px]">
+            <!-- IMAGE DIV -->
+            <div
+                class="w-[55px] h-[100px] md:w-[58px] md:h-[105px] lg:w-[60px] lg:h-[110px] xl:w-[62px] xl:h-[115px] 2xl:w-[64px] 2xl:h-[120px]">
+                <img src="/images/leadway-logo.png" alt="Leadway Assurance" class="mb-8 w-20">
+            </div>
+            <!-- Title -->
+            <header class="mb-[30px]">
+
+                <h1
+                    class="font-semibold text-[20px] text-[#585858] sm:text-[24px] md:text-[26px] lg:text-[28px] xl:text-[30px] 2xl:text-[32px]">
+                    Underwriter Dashboard</h1>
+                <p class="text-[11px] text-[#AFB0B1]">Welcome. Login to your portal account.</p>
+            </header>
+
+            <!-- Form Container -->
+            <form class="flex flex-col gap-[20px] md:max-w-[350px] lg:max-w-[400px] xl:max-w-[450px] 2xl:max-w-[500px]">
+                <!-- EMAIL ID -->
+                <div class="bg-[#fff] pl-[20px] pr-[20px] pb-[8px] pt-[5px] rounded-[7px]">
+                    <label for="login-id" class="text-[12px] text-bold">Login ID</label>
+                    <div class="flex justify-between mt-[8px]">
+                        <input type="text" id="login-id" placeholder="enter your login ID"
+                            class="text-[10px] w-full rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500">
+                        <div class="w-[10px] h-[10px]">
+                            <img src="/images/user-icon.svg"></i>
+                        </div>
+                    </div>
+                </div>
+                <!-- PASSWORD INPUT -->
+                <div class="bg-[#fff] pl-[20px] pr-[20px] pb-[8px] pt-[15px] rounded-[5px]">
+
+                    <div class="flex justify-between">
+                        <label for="password" class=" text-gray-700 text-bold text-[12px]">Password</label>
+                        <span class="text-[10px] text-[#EE5331] font-bold mr-[-6px] uppercase">show</span>
+                    </div>
+                    <div class="flex justify-between mt-[8px]">
+                        <input type="password" id="password" placeholder="enter your password" class="text-[10px]">
+                        <div class="w-[10px] h-[10px]">
+                            <img src="./images/lock.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="flex items-center justify-between mb-6">
+                    <label class="flex items-center text-gray-500">
+                        <span class="ml-2 text-xs">Keep me logged in</span>
+                    </label>
+                    <a href="#" class="text-gray-500 text-xs">Reset Password</a>
+                </div>
+                <button type="submit" class="w-full p-3 bg-[#FF7A00] text-white font-bold rounded-md focus:outline-none focus:ring-2
+                    focus:ring-orange-500">Login</button>
+            </form>
+        </div>
+
+        <!-- Right SECTION -->
+        <div class='right-container sm:w-1/2 sm:h-screen max-sm:hidden'>
+            <img src="/images/broker-portal.png" class="w-[20] h-18" />
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>
