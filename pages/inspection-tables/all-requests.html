@@ -1,19 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="/dist/output.css" rel="stylesheet">
 </head>
 
-<body class="bg-[#FDFDFD] flex flex-col gap-10">
+<body class="bg-[#FDFDFD] flex flex-col gap-10 p-4 md:p-10">
     <!-- MAIN CONTENT, TOP CONTENT -->
 
     <div class="flex justify-between">
         <div>
-            <h1 class="font-medium text-xl text-[#34475E]">Inspection List
-            </h1>
+            <h1 class="font-medium text-xl text-[#34475E]">Inspection List</h1>
             <p class="mt-1 text-xs text-[#2F2F2F]">See Inspections across all business classes</p>
         </div>
 
-        <div class="mt-4 sm:mt-0">
-            <button class="bg-[#FF7A00] border rounded py-2 px-4 text-white flex items-center">
+        <div class="mt-4 md:mt-0">
+            <button class="bg-[#FF7A00] border rounded py-2 px-4 text-white flex items-center"
+                onclick="loadPage('/pages/create-inspection.html'), this">
                 <img src="/images/svgs/plus-icon.svg" alt="" class="mr-2">
                 <span class="text-xs"><a href="./create-inspection.html">Create New Inspection</a></span>
             </button>
@@ -22,18 +27,19 @@
 
 
     <!-- Tabs -->
-    <div class="mt-10 flex justify-between items-center">
-        <div class="border rounded-lg flex flex-row min-w-[230px] max-w-[270px] w-full bg-[#EEEEEE] py-1 px-1">
+    <div class="mt-10 flex flex-col md:flex-row md:justify-between items-center">
+        <div
+            class="border rounded-lg flex flex-row min-w-[230px] max-w-[270px] w-full bg-[#EEEEEE] py-1 px-1 mb-4 md:mb-0">
             <button
-                class="py-2 px-4 rounded-lg text-[#2f2f2f] text-center bg-white focus:bg-white focus:outline-none text-xs "
+                class="py-2 px-4 rounded-lg text-[#2f2f2f] text-center bg-white focus:bg-white focus:outline-none text-xs"
                 id="all-requests-button" onclick="loadPage('/pages/inspection-tables/all-requests.html', this)">
                 All Requests
             </button>
-            <button class="px-3 py-2 rounded-lg text-[#2f2f2f] flex-grow text-center text-xs " id="ongoing-button"
+            <button class="px-3 py-2 rounded-lg text-[#2f2f2f] flex-grow text-center text-xs" id="ongoing-button"
                 onclick="loadPage('/pages/inspection-tables/ongoing.html', this)">
                 Ongoing
             </button>
-            <button class="px-3 py-1 rounded-lg text-[#2f2f2f] flex-grow text-center text-xs " id="completed-button"
+            <button class="px-3 py-1 rounded-lg text-[#2f2f2f] flex-grow text-center text-xs" id="completed-button"
                 onclick="loadPage('/pages/inspection-tables/completed.html', this)">
                 Completed
             </button>
@@ -83,7 +89,7 @@
                             <td class="px-4 py-2 text-sm text-gray-700">Digital</td>
                             <td class="px-4 py-2 text-sm text-gray-700">Mustapha Onasanya</td>
                             <td class="px-4 py-2 text-sm text-gray-700"><span class="bg-[#FFDEBF] text-[#FF7A00] border font-medium py-[1px] px-4 rounded-[3px]
-                                            text-xs">Ongoing</span></td>
+                                    text-xs">Ongoing</span></td>
                         </tr>
                         <tr>
                             <td class="px-4 py-2 text-sm text-gray-700">10321</td>
@@ -94,7 +100,7 @@
                             <td class="px-4 py-2 text-sm text-gray-700">Manual</td>
                             <td class="px-4 py-2 text-sm text-gray-700">Mustapha Onasanya</td>
                             <td class="px-4 py-2 text-sm text-gray-700"><span class="bg-[#ECFDF3] font-medium text-[#027A48] rounded-[3px] border py-[1px] px-2
-                                                text-xs">Completed</span>
+                                    text-xs">Completed</span>
                             </td>
                         </tr>
                     </tbody>
@@ -103,8 +109,6 @@
         </div>
     </div>
 
-
 </body>
-
 
 </html>

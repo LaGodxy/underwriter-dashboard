@@ -12,3 +12,8 @@
     background-position: center;
     background-repeat: no-repeat;
 }
+
+/* Add this to your CSS file */
+.active {
+    color: #FF7A00;
+}

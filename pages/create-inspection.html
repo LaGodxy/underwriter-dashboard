@@ -1,114 +1,46 @@
-<!DOCTYPE html>
-<html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Create Inspection</title>
     <link rel="stylesheet" href="/dist/output.css">
+    <link rel="stylesheet" href="/style.css">
 </head>
 
-<body class="flex font-Mulish bg-[#FDFDFD]">
 
-    <nav class="w-full bg-white shadow fixed top-0 z-40">
-        <div class="h-[60px]">
-            <div class="flex items-center justify-end h-16">
-                <!-- Right Side -->
-                <div class="flex items-center">
-                    <!-- Notification Icon -->
-                    <div class="mr-6 lg:mr-[29px]">
-                        <img class="h-6 w-6" src="/images/svgs/notification-icon.svg" alt="Notifications">
+<!-- MAIN CONTENT, TOP CONTENT -->
+<div class="mt-2">
+    <div class="flex justify-between">
+        <div class="flex flex-col">
+            <h1 class="font-medium text-xl text-[#34475E]">Create New Inspection
+            </h1>
+            <p class="text-xs text-[#2F2F2F]">See Inspections across all business classes</p>
+        </div>
+
+        <button class="sm:mt-0 flex flex-col justify-items-center ml-4"
+            onclick="loadPage('/pages/dashboard2.html', this)">
+            <img src="/images/svgs/close-icon.svg" alt="" class="">
+            <span class="text-xs text-[#ACACAC] mt-2">Close</span>
+        </button>
+    </div>
+
+    <!-- BODY -->
+    <div class="px-0 lg:w-full h-screen bg-transparent">
+        <div class="flex flex-col items-center gap-[50px]">
+            <div class="flex flex-col gap-7 mt-5 ">
+                <!-- PRE AND POST IMAGE CONTAINER -->
+                <div class="flex flex-col items-center justify-center gap-6 md:flex-row ">
+                    <div class="flex border rounded-lg flex-col items-center cursor-pointer"
+                        onclick="changeStyle(this)">
+                        <img src="/images/svgs/pre-loss-inspectino.svg" class="w-[200px] h-[auto] border-none">
                     </div>
-                    <!-- User Profile -->
-                    <div class="flex items-center space-x-2 mr-4 lg:mr-[60px]">
-                        <img class="h-8 w-8 rounded-full mr-2" src="/images/svgs/AM.svg" alt="User Profile">
-                        <span class="text-gray-700 text-sm mr-2">Adesola</span>
-                        <img src="/images/svgs/arrow-facing-down.svg" class="mr-2" alt="arrow-facing-down">
+
+
+                    <div class="flex flex-col items-center relative border rounded-lg cursor-pointer sm:flex-row"
+                        onclick="changeStyle(this)">
+                        <img src="/images/svgs/post-loss-inspection.svg" alt="" class="w-[200px] h-[auto]">
+                        <img src="/images/svgs/right-arrow.svg" alt="" class="absolute left-[20%] top-[40%] w-[40px]">
                     </div>
                 </div>
-            </div>
-        </div>
-    </nav>
 
-    <!-- SMALL SIDE-BAR -->
-    <div class="w-[63px] bg-[#2F2F2F] text-white flex flex-col items-center sticky top-0 z-50">
-        <!-- Icons -->
-        <div class="mt-32">
-            <img src="/images/svgs/side-bar-1.svg" alt="">
-        </div>
-        <div class="mt-[52px] py-2 px-5 bg-white">
-            <img src="/images/svgs/side-bar-2.svg" alt="">
-        </div>
-        <div class="my-4">
-            <img src="/images/svgs/side-icon-3.svg" alt="">
-        </div>
-        <div class="my-4">
-            <img src="/images/svgs/side-icon-4.svg" alt="">
-        </div>
-        <div class="my-4">
-            <img src="/images/svgs/side-icon-5.svg" alt="">
-        </div>
-        <div class="my-4">
-            <img src="/images/svgs/side-icon-6.svg" alt="">
-        </div>
-
-    </div>
-
-    <!-- BIG SIDE-BAR -->
-    <div class="w-[213px] bg-white border-r-[#EEEEEE] border-solid border-2 z-50 hidden lg:block">
-        <div class="pl-[18px]">
-            <div class="pt-[47px]">
-                <img src="/images/lac-dashboard-logo.png" alt="">
-            </div>
-
-            <p class="mt-5 font-semibold text-[#7A7C87] text-base">TRM</p>
-
-            <div class="mt-6 w-[15px] flex justify-between mb-5">
-                <img src="/images/svgs/overview.svg" alt="">
-                <p class="text-sm text-orange-500 ml-[21px]">Overview</p>
-            </div>
-
-            <div class="mt-[35px] w-[15px] flex justify-between">
-                <img src="/images/svgs/requests.svg" alt="">
-                <p class="text-sm text-[#9FA8AF] ml-[21px]"><a href="./inspection.html">Requests</a></p>
-            </div>
-
-        </div>
-    </div>
-
-    <!-- MAIN CONTENT, TOP CONTENT -->
-    <div class="px-11 mt-24 w-4/5">
-        <div class="flex justify-between">
-            <div>
-                <h1 class="font-medium text-xl text-[#34475E]">Create New Inspection
-                </h1>
-                <p class="mt-1 text-xs text-[#2F2F2F]">See Inspections across all business classes</p>
-            </div>
-
-            <div class="sm:mt-0 flex flex-col justify-items-center ml-4">
-                <img src="/images/svgs/close-icon.svg" alt="" class="">
-                <span class="text-xs text-[#ACACAC] mt-2">Close</span>
-            </div>
-
-        </div>
-
-        <!-- BODY -->
-        <div class="p-6 px-0 w-full lg:w-full h-screen bg-transparent">
-            <div class="flex flex-col items-center gap-[50px]"> 
-                <div class="flex flex-col gap-7 mt-5">
-                    <!-- PRE AND POST IMAGE CONTAINER -->
-                    <div class="flex flex-row items-center justify-center gap-6">
-                        <div class="flex flex-col items-center">
-                            <img src="/images/svgs/pre-loss-inspectino.svg" class="w-[200px] h-[auto]">
-                        </div>
-                        <div class="flex flex-col items-center relative">
-                            <img src="/images/svgs/post-loss-inspection.svg" alt="" class="w-[200px] h-[auto]">
-                            <img src="/images/svgs/right-arrow.svg" alt=""
-                                class="absolute left-[20%] top-[40%] w-[40px]">
-                        </div>
-                    </div>
-
-                    <!-- SELECT CHOOSE A CLASS CONTAINER -->
+                <!-- SELECT CHOOSE A CLASS CONTAINER -->
+                <div>
                     <div class="flex flex-col gap-3 ">
                         <label for="class" class="text-[#FDFDFD] text-sm">Choose a class</label>
                         <div
@@ -121,22 +53,17 @@
                         </div>
                     </div>
                 </div>
-
-                <a href="./pre-loss-form.html" class="btn">
-                    <button
-                        class="bg-[#C3C4C6] text-white h-9 rounded-sm py-5 px-10 flex gap-3 justify-center items-center mb-[10px] hover:bg-[#FF7A00]">
-                        <img src="/images/svgs/create-request-icon.svg" alt="create" /> <a
-                            href="/pages/pre-loss-property.html">Create Request</a>
-                    </button>
-                </a>
             </div>
+
+
+            <button
+                class="bg-[#C3C4C6] text-white h-9 rounded-sm py-5 px-10 flex gap-3 justify-center items-center mb-[10px] hover:bg-[#FF7A00] cursor-pointer"
+                id="external-button" onclick="loadPage('/pages/pre-loss-property.html', this)" disabled>
+                <img src="/images/svgs/create-request-icon.svg" alt="create" /> Create Request
+            </button>
+
         </div>
-
-
     </div>
 
 
-
-</body>
-
-</html>
+</div>
