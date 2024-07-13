@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/images/leadway-logo.png">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="/dist/output.css" />
+</head>
+
+<body>
+    <div class="flex w-screen h-screen font-Mulish">
+        <!-- SIDE BAR 1-->
+        <div class="hidden lg:flex flex-col items-center justify-start bg-[#2F2F2F] w-16 h-screen pt-32 gap-8">
+            <a href="#"><img src="/images/svgs/side-bar-1.svg" alt="home" /></a>
+            <span class="bg-[#ffffff] w-full inline-flex justify-center py-2">
+                <a href="#"><img src="/images/svgs/side-bar-2.svg" alt="home" /></a>
+            </span>
+            <a href="#"><img src="/images/svgs/side-icon-3.svg" alt="home" /></a>
+            <a href="#"><img src="/images/svgs/side-icon-4.svg" alt=""></a>
+            <a href="#"><img src="/images/svgs/side-icon-5.svg" alt=""></a>
+            <a href="#"><img src="/images/svgs/side-icon-6.svg" alt="home" /></a>
+        </div>
+
+        <!-- SIDE BAR 2 -->
+        <div class="w-52 hidden lg:flex flex-col items-start justify-start pt-12 p-5 gap-5 border border-[#EEEEEE]">
+            <a href="#" class="flex items-center"><img src="/images/lac-dashboard-logo.png" alt="logo" /></a>
+            <span class="text-slate-500">TRM</span>
+            <a href="#" class="flex items-center justify-start gap-3 text-[#FF7A00]"><img
+                    src="/images/svgs/overview.svg" alt="home" />Overview</a>
+            <a href="./inspection.html" class="flex items-center justify-start gap-3"><img
+                    src="/images/svgs/requests.svg" alt="home" />Requests</a>
+        </div>
+        <div class="flex flex-col w-full">
+            <!-- TOP BAR -->
+            <div class="flex items-center justify-end gap-4 p-4 border-b border-[#EEEEEE]">
+                <a href="#"><img src="/images/svgs/notification-icon.svg" alt="home" /></a>
+                <a href="#"><img src="/images/svgs/AM.svg" alt="home" /></a>
+                <span class="">Adesola</span>
+                <a href="#"><img src="/images/svgs/arrow-facing-down.svg" alt="home" /></a>
+            </div>
+
+            <!-- MAIN DASHBOARD AREA -->
+            <div class="flex flex-col p-10 gap-5 overflow-auto bg-[#FDFDFD]">
+                <div
+                    class="w-full flex flex-col items-start justify-center gap-5 lg:items-center lg:justify-between lg:flex-row">
+                    <div class="flex flex-col">
+                        <h1 class="text-[#34475E] text-xl">
+                            Welcome, <strong> Olufemi </strong>
+                        </h1>
+                        <p class="text-[#2F2F2F] text-xs">
+                            Take a look at your dashboard and see all pending tasks
+                        </p>
+                    </div>
+
+                    <button class="bg-[#FF7A00] border rounded py-2 px-4 text-white flex items-center">
+                        <img src="/images/svgs/plus-icon.svg" alt="" class="mr-2">
+                        <a class="text-xs" href="/pages/create-inspection.html">Create New Inspection</a>
+                </div>
+
+                <div class="flex flex-col lg:flex-row items-start justify-between w-full gap-5">
+                    <div class="grid grid-cols-2 gap-5 w-full lg:w-3/5">
+                        <div
+                            class="flex flex-col justify-between items-end bg-[#4A8DFF] h-40 relative text-white p-4 rounded-md overflow-hidden before:absolute before:bg-[#7AABFF] before:rounded-full before:w-20 before:h-20 before:bottom-[-20px] before:left-[-20px] after:absolute after:bg-[#7AABFF] after:rounded-full after:w-24 after:h-24 after:top-[-30px] after:right-[-30px]">
+                            <div class="z-[1] text-xl font-medium">All Requests</div>
+                            <div class="flex items-center justify-between w-full z-[1] px-2">
+                                <img src="/images/svgs/finger-point.svg" alt="hand" />
+                                <p class="text-5xl font-medium">32</p>
+                            </div>
+                        </div>
+
+                        <div
+                            class="flex flex-col justify-between items-end bg-[#00B388] h-40 relative text-white p-4 rounded-md overflow-hidden before:absolute before:bg-[#15BE96] before:rounded-full before:w-20 before:h-20 before:bottom-[-20px] before:left-[-20px] after:absolute after:bg-[#15BE96] after:rounded-full after:w-24 after:h-24 after:top-[-30px] after:right-[-30px]">
+                            <div class="z-[1] text-xl font-medium">Complete Requests</div>
+                            <div class="flex items-center justify-between w-full z-[1] px-2">
+                                <img src="/images/svgs/finger-point.svg" alt="hand" />
+                                <p class="text-5xl font-medium">114</p>
+                            </div>
+                        </div>
+
+                        <div
+                            class="flex flex-col justify-between items-end bg-[#FDC75B] h-40 relative text-white p-4 rounded-md overflow-hidden before:absolute before:bg-[#FFB946] before:rounded-full before:w-20 before:h-20 before:bottom-[-20px] before:left-[-20px] after:absolute after:bg-[#FFB946] after:rounded-full after:w-24 after:h-24 after:top-[-30px] after:right-[-30px]">
+                            <div class="z-[1] text-xl font-medium">Ongoing Requests</div>
+                            <div class="flex items-center justify-between w-full z-[1] px-2">
+                                <img src="/images/svgs/finger-point.svg" alt="hand" />
+                                <p class="text-5xl font-medium">19</p>
+                            </div>
+                        </div>
+
+                        <div
+                            class="flex flex-col justify-between items-end bg-[#E30000] h-40 relative text-white p-4 rounded-md overflow-hidden before:absolute before:bg-[#FE4840] before:rounded-full before:w-20 before:h-20 before:bottom-[-20px] before:left-[-20px] after:absolute after:bg-[#FE4840] after:rounded-full after:w-24 after:h-24 after:top-[-30px] after:right-[-30px]">
+                            <div class="z-[1] text-xl font-medium">Delayed Requests</div>
+                            <div class="flex items-center justify-between w-full z-[1] px-2">
+                                <img src="/images/svgs/finger-point.svg" alt="hand" />
+                                <p class="text-5xl font-medium">19</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="rounded-lg border border-[#D8D8D8] w-full lg:w-2/5">
+                        <div class="border-b border-[#D8D8D8] flex justify-between items-center p-5">
+                            <p>Activity</p>
+                            <button class="flex items-center justify-start gap-2">
+                                View all
+                                <img src="/images/svgs/arrow-facing-down.svg"> </button>
+                        </div>
+                        <div class="px-5">
+                            <div class="flex items-center justify-b w-full py-4">
+                                <p class="text-balance w-[70%] text-[#2F2F2F] text-xs font-normal leading-4">
+                                    You have a property inspection coming up in three days
+                                </p>
+                                <a href="#" class="text-end text-nowrap w-[30%] text-[#FF7A00] text-xs font-normal">Set
+                                    reminder</a>
+                            </div>
+                            <hr class="bg-[#F6F6F6]" />
+                            <div class="flex items-center justify-b w-full py-4">
+                                <p class="text-balance w-[70%] text-[#2F2F2F] text-xs font-normal leading-4">
+                                    Mustapha Onasanya sent a new property inspection for
+                                    Rovenheight homes
+                                </p>
+                                <a href="#" class="text-end text-nowrap w-[30%] text-[#FF7A00] text-xs font-normal">See
+                                    Inspection</a>
+                            </div>
+                            <hr class="bg-[#F6F6F6]" />
+                            <div class="flex items-center justify-b w-full py-4">
+                                <p class="text-balance w-[70%] text-[#2F2F2F] text-xs font-normal leading-4">
+                                    Your scheduled inspection for Gig Logistics is three days
+                                    overdue
+                                </p>
+                                <a href="#"
+                                    class="text-end text-nowrap w-[30%] text-[#FF7A00] text-xs font-normal">Re-schedule
+                                    now</a>
+                            </div>
+                            <hr class="bg-[#F6F6F6]" />
+                            <div class="flex items-center justify-b w-full pt-4 pb-8">
+                                <p class="text-balance w-[70%] text-[#2F2F2F] text-xs font-normal leading-4">
+                                    Mustapha Onasanya sent a new property inspection for
+                                    Rovenheight homes
+                                </p>
+                                <a href="#" class="text-end text-nowrap w-[30%] text-[#FF7A00] text-xs font-normal">See
+                                    Inspection</a>
+                            </div>
+                            <hr class="bg-[#F6F6F6]" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex justify-between items-center mt-16">
+                    <h2 class="text-sm font-medium text-[#34475E]">Created Inspections</h2>
+                    <a href="#" class="text-xs text-[#C3C4C6]">View all</a>
+                </div>
+
+                <div class="rounded-lg mt-0">
+                    <div class="bg-white border-[#D8D8D8] border shadow rounded-lg p-4">
+                        <div class="overflow-x-auto">
+                            <table class="min-w-full bg-white">
+                                <thead class="">
+                                    <tr>
+                                        <th class="px-4 pt-4 pb-4 text-xs font-medium text-[#7F8B94] text-left">
+                                            <p
+                                                class="text-xs text-[#7F8B94] font-medium flex items-center justify-start gap-2 leading-none">
+                                                ID
+                                                <img src="/images/svgs/sort.svg" class="h-2 w-2" alt="">
+                                            </p>
+                                        </th>
+                                        <th class="">
+                                            <p
+                                                class="text-xs text-[#7F8B94] font-medium flex items-center justify-start gap-2 leading-none">
+                                                Name
+                                                <img src="/images/svgs/sort.svg" class="h-2 w-2" alt="">
+                                            </p>
+                                        </th>
+
+                                        <th class="px-4 py-4 text-left">
+                                            <p
+                                                class="text-xs text-[#7F8B94] font-medium flex items-center justify-start gap-2 leading-none">
+                                                Class
+                                                <img src="/images/svgs/sort.svg" class="h-2 w-2" alt="">
+                                            </p>
+                                        </th>
+                                        <th class="px-4 py-4 text-left">
+                                            <p
+                                                class="text-xs text-[#7F8B94] font-medium flex items-center justify-start gap-2 leading-none">
+                                                Inspection method
+                                                <img src="/images/svgs/sort.svg" class="h-2 w-2" alt="">
+                                            </p>
+                                        </th>
+                                        <th class="px-4 py-4 text-left">
+                                            <p
+                                                class="text-xs text-[#7F8B94] font-medium flex items-center justify-start gap-2 leading-none">
+                                                Officer
+                                                <img src="/images/svgs/sort.svg" class="h-2 w-2" alt="">
+                                            </p>
+                                        </th>
+                                        <th class="px-4 py-4 text-left">
+                                            <p
+                                                class="text-xs text-[#7F8B94] font-medium flex items-center justify-start gap-2 leading-none">
+                                                Status
+                                                <img src="/images/svgs/sort.svg" class="h-2 w-2" alt="">
+                                            </p>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody class="divide-y divide-gray-200">
+                                    <tr>
+                                        <td class="px-4 py-2 text-sm text-gray-700">10321</td>
+                                        <td class="pl-1 py-2 text-sm text-gray-700">GIG Logistics</td>
+                                        <td class="px-4 py-2 text-sm text-gray-700"><span
+                                                class="text-purple-600">•</span>
+                                            Marine</td>
+                                        <td class="px-4 py-2 text-sm text-gray-700">Digital</td>
+                                        <td class="px-4 py-2 text-sm text-gray-700">Mustapha Onasanya</td>
+                                        <td class="px-4 py-2 text-xs text-[#9F9F9F]">QUOTE REQUEST</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-2 text-sm text-gray-700">10321</td>
+                                        <td class="pl-1 py-2 text-sm text-gray-700">Shoprite Stores</td>
+                                        <td class="px-4 py-2 text-sm text-gray-700"><span
+                                                class="text-purple-600">•</span>
+                                            Property</td>
+                                        <td class="px-4 py-2 text-sm text-gray-700">Manual</td>
+                                        <td class="px-4 py-2 text-sm text-gray-700">Mustapha Onasanya</td>
+                                        <td class="px-4 py-2 text-sm text-gray-700"><span class="bg-[#ECFDF3] font-medium text-[#027A48] rounded-sm border py-[1px] px-2
+                                            text-xs">Completed</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-2 text-sm text-gray-700">10321</td>
+                                        <td class="pl-1 py-2 text-sm text-gray-700">Abiodun Abayomi</td>
+                                        <td class="px-4 py-2 text-sm text-gray-700"><span
+                                                class="text-orange-600">•</span>
+                                            Motors</td>
+                                        <td class="px-4 py-2 text-sm text-gray-700">Digital</td>
+                                        <td class="px-4 py-2 text-sm text-gray-700">Mustapha Onasanya</td>
+                                        <td class="px-4 py-2 text-sm text-gray-700"><span class="bg-[#FFDEBF] text-[#FF7A00] border font-medium py-[1px] px-4 rounded-sm
+                                            text-xs">Ongoing</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-2 text-sm text-gray-700">10321</td>
+                                        <td class="pl-1 py-2 text-sm text-gray-700">Ben's Agro Allied</td>
+                                        <td class="px-4 py-2 text-sm text-gray-700"><span
+                                                class="text-green-600">•</span>
+                                            Agric</td>
+                                        <td class="px-4 py-2 text-sm text-gray-700">Manual</td>
+                                        <td class="px-4 py-2 text-sm text-gray-700">Mustapha Onasanya</td>
+                                        <td class="px-4 py-2 text-xs text-[#9F9F9F] font-medium">SENT TO ENGINEER</td>
+
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-2 text-sm text-gray-700">10321</td>
+                                        <td class="pl-1 py-2 text-sm text-gray-700">Abiodun Abayomi</td>
+                                        <td class="px-4 py-2 text-sm text-gray-700"><span
+                                                class="text-yellow-600">•</span>
+                                            Bond</td>
+                                        <td class="px-4 py-2 text-sm text-gray-700">Digital</td>
+                                        <td class="px-4 py-2 text-sm text-gray-700">Mustapha Onasanya</td>
+                                        <td class="px-4 py-2 text-sm text-gray-700">
+                                            <span class="bg-[#FEF3F2] text-[#B42318] pl-1 pr-2 py-1 font-medium rounded text-xs inline-flex
+                                            items-center">
+                                                <img src="/images/svgs/x-icon.svg" class="mr-2 ml-1" alt="x-icon">
+                                                Link expired
+                                            </span>
+                                        </td>
+
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-2 text-sm text-gray-700">10321</td>
+                                        <td class="pl-1 py-2 text-sm text-gray-700">Julius Berger</td>
+                                        <td class="px-4 py-2 text-sm text-gray-700"><span class="text-red-600">•</span>
+                                            Engineering</td>
+                                        <td class="px-4 py-2 text-sm text-gray-700">Digital</td>
+                                        <td class="px-4 py-2 text-sm text-gray-700">Mustapha Onasanya</td>
+                                        <td class="px-4 py-2 text-sm text-gray-700">
+                                            <span class="bg-[#F2F4F7] text-[#344054] font-medium py-1 px-3 rounded text-xs inline-flex
+                                            items-center">
+                                                <img src="/images/svgs/inspection-icon.svg" class="mr-2" alt="">
+                                                Inspection link
+                                            </span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-2 text-sm text-gray-700">10321</td>
+                                        <td class="pl-1 py-2 text-sm text-gray-700">Abiodun Abayomi</td>
+                                        <td class="px-4 py-2 text-sm text-gray-700"><span
+                                                class="text-green-600">•</span>
+                                            Agric</td>
+                                        <td class="px-4 py-2 text-sm text-gray-700">Digital</td>
+                                        <td class="px-4 py-2 text-sm text-gray-700">Mustapha Onasanya</td>
+                                        <td class="px-4 py-2 text-sm text-gray-700"><span class="bg-[#ECFDF3] font-medium text-[#027A48] rounded-sm border py-[1px] px-2
+                                            text-xs">Completed</span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -5,3 +5,10 @@
 @import "tailwindcss/utilities";
 
 @import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+.bg-svg-background {
+    background-image: url("./images/broker-portal.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
