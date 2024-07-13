@@ -5,7 +5,7 @@
 <body class="bg-[#FDFDFD] flex flex-col gap-10">
     <!-- MAIN CONTENT, TOP CONTENT -->
 
-    <div class="w-full flex justify-between">
+    <div class="flex justify-between">
         <div>
             <h1 class="font-medium text-xl text-[#34475E]">Inspection List
             </h1>
@@ -23,33 +23,21 @@
 
     <!-- Tabs -->
     <div class="mt-10 flex justify-between items-center">
-        <!-- <div class="border rounded-lg flex gap-2 bg-[#EEEEEE] py-2 px-1">
-            <button class="px-4 py-2 rounded-lg text-[#2f2f2f] flex-grow text-center text-xs " id="all-requests-button"
-                onclick="loadPage('/pages/inspection-tables/all-requests.html', this)">
+        <div class="border rounded-lg flex flex-row min-w-[230px] max-w-[270px] w-full bg-[#EEEEEE] py-1 px-1">
+            <button
+                class="py-2 px-4 rounded-lg text-[#2f2f2f] text-center bg-white focus:bg-white focus:outline-none text-xs "
+                id="all-requests-button" onclick="loadPage('/pages/inspection-tables/all-requests.html', this)">
                 All Requests
             </button>
-            <button class="px-4 py-2 rounded-lg text-[#2f2f2f] flex-grow text-center text-xs " id="ongoing-button"
+            <button class="px-3 py-2 rounded-lg text-[#2f2f2f] flex-grow text-center text-xs " id="ongoing-button"
                 onclick="loadPage('/pages/inspection-tables/ongoing.html', this)">
                 Ongoing
             </button>
-            <button class="px-4 py-2 rounded-lg text-[#2f2f2f] flex-grow text-center text-xs " id="completed-button"
+            <button class="px-3 py-1 rounded-lg text-[#2f2f2f] flex-grow text-center text-xs " id="completed-button"
                 onclick="loadPage('/pages/inspection-tables/completed.html', this)">
                 Completed
             </button>
-        </div> -->
-        <!-- <ul class="flex bg-[#EEEEEE] rounded-lg border py-2 px-1">
-            <li class="">
-                <a class="bg-white rounded-lg py-2 px-4 text-[#2F2F2F] font-normal text-xs"
-                    onclick="loadPage('/pages/inspection-tables/all-requests.html', this)">All
-                    Requests</a>
-            </li>
-            <li class="">
-                <a class="py-2 px-4 text-[#2F2F2F] font-normal text-xs" href="./ongoing.html">Ongoing</a>
-            </li>
-            <li class="">
-                <a class="py-2 px-4 text-[#2F2F2F] font-normal text-xs" href="./completed.html">Completed</a>
-            </li>
-        </ul> -->
+        </div>
 
         <div class="flex items-center space-x-4">
             <div class="relative">
@@ -71,10 +59,7 @@
 
 
     <!-- TABLE -->
-    <div id="inspection" class="overflow-x-auto" style="height: 550px">
-        <!-- Dynamically loaded content will be injected here -->
-    </div>
-    <!-- <div class="rounded-lg mt-4">
+    <div class="rounded-lg mt-4">
         <div class="bg-white border-[#D8D8D8] border rounded-lg p-4">
             <div class="overflow-x-auto">
                 <table class="min-w-full bg-white">
@@ -116,7 +101,7 @@
                 </table>
             </div>
         </div>
-    </div> -->
+    </div>
 
 
 </body>

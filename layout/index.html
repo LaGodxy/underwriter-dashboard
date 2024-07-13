@@ -9,8 +9,9 @@
     <link rel="stylesheet" href="/dist/output.css" />
 </head>
 
-<body class="flex text-[#7a7c87] font-Mulish">
-    <aside class="lg:flex  text-white flex-col items-center justify-start bg-[#2F2F2F] w-16 pt-32 gap-8">
+<body class="flex text-[#7a7c87] font-Mulish h-screen">
+    <aside
+        class="lg:flex h-full text-white flex-col items-center justify-start bg-[#2F2F2F] w-16 pt-32 gap-8 hidden md:flex">
         <a href="#"><img src="/images/svgs/side-bar-1.svg" alt="home" /></a>
         <span class="bg-[#ffffff] w-full inline-flex justify-center py-2">
             <a href="#"><img src="/images/svgs/side-bar-2.svg" alt="home" /></a>
@@ -21,8 +22,8 @@
         <a href="#"><img src="/images/svgs/side-icon-6.svg" alt="home" /></a>
     </aside>
 
-    <!-- SECOND SIDEBAR -->
-    <aside class="w-52 hidden lg:flex flex-col items-start justify-start pt-12 p-5 gap-5 border border-[#EEEEEE]">
+    <aside
+        class="w-52 hidden h-full lg:flex flex-col items-start justify-start pt-12 p-5 gap-5 border border-[#EEEEEE] hidden md:flex">
         <a href="#" class="flex items-center"><img src="/images/lac-dashboard-logo.png" alt="logo" /></a>
         <span class="text-slate-500">TRM</span>
         <button onclick="loadPage('/pages/dashboard2.html', this)"
@@ -30,15 +31,14 @@
             <img src="/images/svgs/overview.svg" alt="home">
             <span class="text-sm text-[#FF7A00] ml-3">Overview</span>
         </button>
-        <button onclick="loadPage('/pages/inspection.html', this)"
-            class="mb-5 text-gray-900 flex items-center dynamic-button truncate">
+        <button onclick="loadPage('/pages/inspection-tables/all-requests.html', this)"
+            class="mb-5 text-gray-900 flex items-center dynamic-button">
             <img src="/images/svgs/requests.svg" width="22px" height="18px" alt="">
             <span class="text-sm text-[#9FA8AF] ml-3">Requests</span>
         </button>
     </aside>
-    <div class=" flex flex-1 flex-col h-full" style="width: calc(100vw - 64px - 3rem)">
 
-        <!-- TOP NAVIGATION -->
+    <div class="flex flex-1 flex-col h-full w-full lg:w-auto" style="width: calc(100vw - 64px - 3rem)">
         <header class="bg-white w-full h-16 flex justify-between items-center p-4 shadow">
             <div style="width: 70px"></div>
             <div class="flex items-center justify-center relative p-1 gap-3">
@@ -53,6 +53,7 @@
             <!-- Initial content will be loaded here -->
         </main>
     </div>
+
     <script>
         function loadPage(page, button) {
             fetch(page)
@@ -72,76 +73,43 @@
 
         // Load the default page (dashboard) when the page first loads
         document.addEventListener("DOMContentLoaded", function () {
-            loadPage(
-                "/pages/dashboard2.html",
-                document.getElementById("initial-dynamic-button")
-            );
+            loadPage("/pages/dashboard2.html", document.getElementById("initial-dynamic-button"));
         });
 
-        // changeStyle handler in createinspection page starts
-
         function changeStyle(div) {
-            // Toggle border color of the clicked div
             div.style.borderColor = "#ff7a00";
-
-            // Toggle background color of the external button
             const externalButton = document.getElementById("external-button");
             externalButton.style.backgroundColor = "#ff7a00";
-            externalButton.style.color = "#ffffff"; // Ensuring text color is readable
-            externalButton.disabled = false; // Enable the button
+            externalButton.style.color = "#ffffff";
+            externalButton.disabled = false;
         }
 
-        // changeStyle handler in createinspection page ends
+        document.getElementById("dropdown-toggle").addEventListener("click", function () {
+            var dropdown = document.getElementById("dropdown-menu");
+            dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+        });
 
-        // dropdown navbar handler starts
-
-        document
-            .getElementById("dropdown-toggle")
-            .addEventListener("click", function () {
-                var dropdown = document.getElementById("dropdown-menu");
-                if (
-                    dropdown.style.display === "none" ||
-                    dropdown.style.display === ""
-                ) {
-                    dropdown.style.display = "block";
-                } else {
-                    dropdown.style.display = "none";
-                }
-            });
-
-        // Close the dropdown if the user clicks outside of it
         window.addEventListener("click", function (e) {
-            if (
-                !document.querySelector(".material-icons").contains(e.target) &&
-                !document.getElementById("dropdown-menu").contains(e.target)
-            ) {
+            if (!document.querySelector(".material-icons").contains(e.target) &&
+                !document.getElementById("dropdown-menu").contains(e.target)) {
                 document.getElementById("dropdown-menu").style.display = "none";
             }
         });
-        // dropdown navbar handler ends
-
-        // surveyreports toggle function starts
 
         function toggleContent(event, target) {
-            // Remove active class from all buttons
             document.querySelectorAll(".toggle-button").forEach((button) => {
                 button.classList.remove("active");
-                button.style.color = "#9FA8AF"; // Reset color
+                button.style.color = "#9FA8AF";
             });
 
-            // Hide all content sections
             document.querySelectorAll(".content").forEach((content) => {
                 content.classList.add("hide");
             });
 
-            // Show the targeted content section
             document.querySelector("." + target).classList.remove("hide");
-
-            // Add active class to the clicked button
             event.target.classList.add("active");
-            event.target.style.color = "#ff7a00"; // Active color
+            event.target.style.color = "#ff7a00";
         }
-        // surveyreports toggle function ends
     </script>
 </body>
 
