@@ -1,108 +1,106 @@
-<!DOCTYPE html>
-<html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Create Inspection</title>
     <link rel="stylesheet" href="/dist/output.css">
+    <link rel="stylesheet" href="/style.css">
 </head>
+<!-- MAIN CONTENT, TOP CONTENT -->
 
-<body class="flex font-Mulish bg-[#FDFDFD]">
+<div class="flex flex-col pl-2">
+    <h1 class="font-medium text-xl text-[#34475E]">Rovenheight Properties
+    </h1>
+    <p class="mt-1 text-xs text-[#2F2F2F]">See Inspection request details</p>
+</div>
 
-    <nav class="w-full bg-white shadow fixed top-0 z-40">
-        <div class="h-[60px]">
-            <div class="flex items-center justify-end h-16">
-                <!-- Right Side -->
-                <div class="flex items-center">
-                    <!-- Notification Icon -->
-                    <div class="mr-6 lg:mr-[29px]">
-                        <img class="h-6 w-6" src="/images/svgs/notification-icon.svg" alt="Notifications">
-                    </div>
-                    <!-- User Profile -->
-                    <div class="flex items-center space-x-2 mr-4 lg:mr-[60px]">
-                        <img class="h-8 w-8 rounded-full mr-2" src="/images/svgs/AM.svg" alt="User Profile">
-                        <span class="text-gray-700 text-sm mr-2">Adesola</span>
-                        <img src="/images/svgs/arrow-facing-down.svg" class="mr-2" alt="arrow-facing-down">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </nav>
+<main class="flex flex-col sm:flex-row pl-2">
+    <section class="px-7 py-4 mt-12 w-[240px] h-auto border rounded-lg">
+        <img src="/images/man-smiling.png" alt="Goodness Ibeneme">
+        <p class="text-[#585858] font-bold text-base text-center mt-2">Goodness Ibeneme</p>
+        <p class="text-base mt-1 font-bold"><span class="text-[#00B388]">Inspection Status:</span> <span
+                class="text-[#FF7A00]">ongoing</span></p>
 
-    <!-- SMALL SIDE-BAR -->
-    <div class="w-[63px] bg-black text-white flex flex-col items-center sticky top-0 z-50">
-        <!-- Icons -->
-        <div class="mt-32">
-            <img src="/images/svgs/side-bar-1.svg" alt="">
-        </div>
-        <div class="mt-[52px] py-2 px-5 bg-white">
-            <img src="/images/svgs/side-bar-2.svg" alt="">
-        </div>
-        <div class="my-4">
-            <img src="/images/svgs/side-icon-3.svg" alt="">
-        </div>
-        <div class="my-4">
-            <img src="/images/svgs/side-icon-4.svg" alt="">
-        </div>
-        <div class="my-4">
-            <img src="/images/svgs/side-icon-5.svg" alt="">
-        </div>
-        <div class="my-4">
-            <img src="/images/svgs/side-icon-6.svg" alt="">
-        </div>
-
-    </div>
-
-    <!-- BIG SIDE-BAR -->
-    <div class="w-[213px] bg-white border-r-[#EEEEEE] border-solid border-2 z-50 hidden lg:block">
-        <div class="pl-[18px]">
-            <div class="pt-[47px]">
-                <img src="/images/lac-dashboard-logo.png" alt="">
-            </div>
-
-            <p class="mt-5 font-semibold text-[#7A7C87] text-base">TRM</p>
-
-            <div class="mt-6 w-[15px] flex justify-between mb-5">
-                <img src="/images/svgs/overview.svg" alt="">
-                <p class="text-sm text-orange-500 ml-[21px]">Overview</p>
-            </div>
-
-            <div class="mt-[35px] w-[15px] flex justify-between">
-                <img src="/images/svgs/requests.svg" alt="">
-                <p class="text-sm text-[#9FA8AF] ml-[21px]"><a href="./inspection.html">Requests</a></p>
-            </div>
-
-        </div>
-    </div>
-
-    <!-- MAIN CONTENT, TOP CONTENT -->
-    <div class="px-11 mt-24 w-4/5">
-        <div class="">
-            <h1 class="font-medium text-xl text-[#34475E]">Rovenheight Properties
-            </h1>
-            <p class="mt-1 text-xs text-[#2F2F2F]">See Inspection request details</p>
-
-        </div>
-
-        <!-- BODY -->
-        <div class="profile-info flex justify-between">
-            <div class="profile-card border rounded-sm border-[#EEEEEE]">
-                <div class="profile-image">
-
-                </div>
-            </div>
-
+        <dl class="mt-4 space-y-4">
             <div>
+                <dt class="text-xs text-[#7A7C87]">Claim Number</dt>
+                <dd class="text-sm text-[#585858]">ASD12358493</dd>
+            </div>
+            <div>
+                <dt class="text-xs text-[#7A7C87]">Policy Number</dt>
+                <dd class="text-sm text-[#585858]">MTR12358493</dd>
+            </div>
+            <div>
+                <dt class="text-xs text-[#7A7C87]">Commencement Date</dt>
+                <dd class="text-sm text-[#585858]">31 May 2022</dd>
+            </div>
+            <div>
+                <dt class="text-xs text-[#7A7C87]">Sum Assured (₦)</dt>
+                <dd class="text-sm text-[#585858]">1,000,000</dd>
+            </div>
+            <div>
+                <dt class="text-xs text-[#7A7C87]">Premium (₦)</dt>
+                <dd class="text-sm text-[#585858]">10,000</dd>
+            </div>
+            <div>
+                <dt class="text-xs text-[#7A7C87]">Vehicle Type</dt>
+                <dd class="text-sm text-[#585858]">Car</dd>
+            </div>
+            <div>
+                <dt class="text-xs text-[#7A7C87]">Policy Term (Years)</dt>
+                <dd class="text-sm text-[#585858]">5</dd>
+            </div>
+            <div>
+                <dt class="text-xs text-[#7A7C87]">Expiry Date</dt>
+                <dd class="text-sm text-[#585858]">19 Dec. 2024</dd>
+            </div>
+            <div>
+                <dt class="text-xs text-[#7A7C87]">Damage Type</dt>
+                <dd class="text-sm text-[#585858]">Interior (engine)</dd>
+            </div>
+        </dl>
+    </section>
+
+    <section class="ml-[47px] mt-12 flex">
+        <div class="">
+            <div class="flex flex-col items-center h-[350px]">
+                <div class="w-[13px] h-[13px] bg-[#FF7A00] border rounded-full relative"></div>
+
+                <img src="/images/svgs/line.svg" alt="">
+
+                <div class="w-[13px] h-[13px] bg-[#FF7A00] rounded-full relative bottom-40"></div>
 
             </div>
         </div>
 
+        <div class="">
+            <p class="text-xs text-[#A7A7A7] font-semibold pl-10 font-Poppins">25 Jan, 2020 9:39 AM</p>
+
+            <div class="w-full max-w-md border rounded-lg h-auto flex flex-col justify-between p-4">
+                <div class="flex flex-col w-full h-full">
+                    <div class="w-3 bg-orange-500 rounded-l">
+                        <!-- border left -->
+                    </div>
+                    <div class="flex-1 flex flex-col justify-between p-2 pl-8">
+                        <div class="flex gap-2 mt-4 pt-3">
+                            <img src="/images/svgs/file-icon.svg" alt="" class="w-6 h-7">
+                            <div class="min-w-44">
+                                <p class="text-sm">You created request for Post Loss Inspection</p>
+                                <p class="text-xs text-orange-500">Leadway Assurance</p>
+                            </div>
+                        </div>
+                        <div class="flex  gap-2 mt-4">
+                            <img src="/images/reqball.png" alt="">
+                            <p class="text-xs">Documents reviewed</p>
+                        </div>
+                    </div>
 
 
-    </div>
 
-
-</body>
-
-</html>
+                    <div class="flex items-center justify-center">
+                        <button class="text-white w-40 h-10 bg-[#FF7A00] rounded-sm text-xs px-6 py-2">View
+                            Request</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>

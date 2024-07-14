@@ -13,6 +13,10 @@
     background-repeat: no-repeat;
 }
 
+* {
+    font-family: 'Mulish';
+}
+
 /* Add this to your CSS file */
 .active {
     color: #FF7A00;
