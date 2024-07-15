@@ -49,8 +49,8 @@
             </div>
         </header>
 
-        <main id="content" class="flex-1 p-6 custom-scrollbar overflow-y-auto">
-            <!-- Initial content will be loaded here -->
+        <main id="content" class="flex-1 p-6  overflow-y-auto">
+            <!-- content will be loaded here -->
         </main>
     </div>
 
@@ -71,9 +71,9 @@
             // button.classList.add("active");
         }
 
-        // Load the default page (dashboard) when the page first loads
+        // The default page loads
         document.addEventListener("DOMContentLoaded", function () {
-            loadPage("/pages/rovenheight-properties.html", document.getElementById("initial-dynamic-button"));
+            loadPage("/pages/survey-report.html", document.getElementById("initial-dynamic-button"));
         });
 
         function changeStyle(div) {
