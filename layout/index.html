@@ -73,7 +73,8 @@
 
         // The default page loads
         document.addEventListener("DOMContentLoaded", function () {
-            loadPage("/pages/survey-report.html", document.getElementById("initial-dynamic-button"));
+            loadPage("/pages/dashboard.html", document.getElementById(
+                "initial-dynamic-button"));
         });
 
         function changeStyle(div) {
@@ -96,20 +97,20 @@
             }
         });
 
-        function toggleContent(event, target) {
-            document.querySelectorAll(".toggle-button").forEach((button) => {
-                button.classList.remove("active");
-                button.style.color = "#9FA8AF";
-            });
+        // function toggleContent(event, target) {
+        //     document.querySelectorAll(".toggle-button").forEach((button) => {
+        //         button.classList.remove("active");
+        //         button.style.color = "#9FA8AF";
+        //     });
 
-            document.querySelectorAll(".content").forEach((content) => {
-                content.classList.add("hide");
-            });
+        //     document.querySelectorAll(".content").forEach((content) => {
+        //         content.classList.add("hide");
+        //     });
 
-            document.querySelector("." + target).classList.remove("hide");
-            event.target.classList.add("active");
-            event.target.style.color = "#ff7a00";
-        }
+        //     document.querySelector("." + target).classList.remove("hide");
+        //     event.target.classList.add("active");
+        //     event.target.style.color = "#ff7a00";
+        // }
     </script>
 </body>
 
