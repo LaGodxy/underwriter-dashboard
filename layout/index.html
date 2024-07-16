@@ -53,7 +53,6 @@
             <!-- content will be loaded here -->
         </main>
     </div>
-
     <script>
         function loadPage(page, button) {
             fetch(page)
@@ -73,7 +72,7 @@
 
         // The default page loads
         document.addEventListener("DOMContentLoaded", function () {
-            loadPage("/pages/dashboard.html", document.getElementById(
+            loadPage("/pages/survey-report.html", document.getElementById(
                 "initial-dynamic-button"));
         });
 
@@ -97,20 +96,21 @@
             }
         });
 
-        // function toggleContent(event, target) {
-        //     document.querySelectorAll(".toggle-button").forEach((button) => {
-        //         button.classList.remove("active");
-        //         button.style.color = "#9FA8AF";
-        //     });
 
-        //     document.querySelectorAll(".content").forEach((content) => {
-        //         content.classList.add("hide");
-        //     });
+        function toggleContent(event, target) {
+            document.querySelectorAll(".toggle-button").forEach((button) => {
+                button.classList.remove("text-[#FF7A00]", "border-b-2", "border-[#FF7A00]");
+                button.style.color = "#9FA8AF";
+            });
 
-        //     document.querySelector("." + target).classList.remove("hide");
-        //     event.target.classList.add("active");
-        //     event.target.style.color = "#ff7a00";
-        // }
+            document.querySelectorAll(".content").forEach((content) => {
+                content.classList.add("hidden");
+            });
+
+            document.querySelector("." + target).classList.remove("hidden");
+            event.target.classList.add("text-[#FF7A00]", "border-b-2", "border-[#FF7A00]");
+            event.target.style.color = "#FF7A00"
+        }
     </script>
 </body>
 

@@ -71,7 +71,7 @@
 
     <!-- BOTTOM DIV -->
     <h1 class="font-bold text-xl text-[#34475E] mt-8">Insured Details</h1>
-    <div class="border rounded-lg mt-5 h-full">
+    <div class="border rounded-lg mt-5 h-[400px]">
         <div class="border-gray-200 p-6">
             <div class="flex space-x-4">
                 <button data-target="a"
@@ -87,53 +87,103 @@
             <hr>
         </div>
 
-        <div class="p-6">
-            <div class="grid grid-cols-5 gap-10 content a">
-                <div class="col-span-1">
-                    <p class="text-xs font-extrabold text-[#34475E]">Insured for</p>
-                    <p class="text-sm text-[#585858] font-normal">Rovenheight Homes</p>
-                </div>
-                <div class="col-span-1">
-                    <p class="text-xs font-extrabold text-[#34475E]">Insured Name</p>
-                    <p class="text-sm text-[#585858] font-normal">Rovenheight Homes</p>
-                </div>
-                <div class="col-span-1">
-                    <p class="text-xs font-extrabold text-[#34475E]">Loss Estimate</p>
-                    <p class="text-sm text-[#585858] font-normal">#1,200,000</p>
-                </div>
-                <div class="col-span-1">
-                    <p class="text-xs font-extrabold text-[#34475E]">Cause of Loss</p>
-                    <p class="text-sm text-[#585858] font-normal">Rovenheight Homes</p>
-                </div>
-                <div class="col-span-2">
-                    <p class="text-xs font-extrabold text-[#34475E]">Property Address</p>
-                    <p class="text-sm text-[#585858] font-normal">No. 16, Rovenheight Homes, Nicon town, Lekki phase 1,
-                        Lagos.</p>
-                </div>
-                <div class="col-span-1">
-                    <p class="text-xs font-extrabold text-[#34475E]">City</p>
-                    <p class="text-sm text-[#585858] font-normal">Lekki</p>
-                </div>
-                <div class="col-span-1">
-                    <p class="text-xs font-extrabold text-[#34475E]">State</p>
-                    <p class="text-sm text-[#585858] font-normal">Lagos</p>
-                </div>
+
+        <div class="p-6 grid grid-cols-5 gap-10 content a">
+            <div class="col-span-1">
+                <p class="text-xs font-extrabold text-[#34475E]">Insured for</p>
+                <p class="text-sm text-[#585858] font-normal">Rovenheight Homes</p>
+            </div>
+            <div class="col-span-1">
+                <p class="text-xs font-extrabold text-[#34475E]">Insured Name</p>
+                <p class="text-sm text-[#585858] font-normal">Rovenheight Homes</p>
+            </div>
+            <div class="col-span-1">
+                <p class="text-xs font-extrabold text-[#34475E]">Loss Estimate</p>
+                <p class="text-sm text-[#585858] font-normal">#1,200,000</p>
+            </div>
+            <div class="col-span-1">
+                <p class="text-xs font-extrabold text-[#34475E]">Cause of Loss</p>
+                <p class="text-sm text-[#585858] font-normal">Rovenheight Homes</p>
+            </div>
+            <div class="col-span-2">
+                <p class="text-xs font-extrabold text-[#34475E]">Property Address</p>
+                <p class="text-sm text-[#585858] font-normal">No. 16, Rovenheight Homes, Nicon town, Lekki phase 1,
+                    Lagos.</p>
+            </div>
+            <div class="col-span-1">
+                <p class="text-xs font-extrabold text-[#34475E]">City</p>
+                <p class="text-sm text-[#585858] font-normal">Lekki</p>
+            </div>
+            <div class="col-span-1">
+                <p class="text-xs font-extrabold text-[#34475E]">State</p>
+                <p class="text-sm text-[#585858] font-normal">Lagos</p>
             </div>
         </div>
 
-        <p class="px-8 py-10 text-[#585858] font-normal text-sm content b hidden">
+
+        <p class="p-10 bg-[#FBFBFB] text-[#585858] font-normal text-sm content b hidden">
             Rovenheight homes registered as a LLC building on the 15th of May 2016 is a Grey and White twelve storey
             building located at No 12 OGUNSANYA DRIVE, ALCOVE ESTATE, LEKKI PHASE 1, LAGOS STATE. The property is owned
             by
             Mr. Badmus Akinrele who stands as the insurer of the property.
         </p>
 
-        <table class="w-full content c hidden table-auto">
+        <table class="w-full content c hidden table-auto mt-2">
             <tbody>
                 <tr
-                    class="flex items-center justify-between w-full gap-5 px-10 py-4 border-b border-b-[#F3F5F6] overflow-auto">
+                    class="flex items-center justify-between w-full gap-5 py-4 px-10 border-b border-b-[#F3F5F6] overflow-auto">
                     <td class="w-full text-sm text-[#34475E]">
-                        <p class="font-medium text-sm text-[#34475E]">Police Document</p>
+                        <p class="font-medium text-sm text-[#34475E]">Policy documents</p>
+                    </td>
+                    <td class="w-1/3 flex items-center justify-end gap-4">
+                        <div class="w-1/2 font-medium text-sm text-[#34475E]">
+                            <p class="text-wrap md:text-nowrap lg:text-nowrap font-bold text-xs text-[#A7A7A7]">25 Aug,
+                                2022
+                                9:00 AM</p>
+                        </div>
+                        <div class="w-1/4 font-medium text-sm text-[#34475E]">
+                            <button
+                                class="bg-none text-[#FF7A00] flex flex-col md:flex-row lg:flex-row items-center justify-start text-xs font-bold text-center">
+                                <img src="/images/svgs/eye.svg" alt="eye" class="mr-1" />View
+                            </button>
+                        </div>
+                        <div class="w-1/4 font-medium text-sm text-[#34475E]">
+                            <button
+                                class="bg-none text-[#FF7A00] flex items-center justify-start text-xs font-bold text-center">
+                                Download
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+                <tr
+                    class="flex items-center justify-between w-full gap-5 py-4 px-10 border-b border-b-[#F3F5F6] overflow-auto">
+                    <td class="w-full text-sm text-[#34475E]">
+                        <p class="font-medium text-sm text-[#34475E]">Police report</p>
+                    </td>
+                    <td class="w-1/3 flex items-center justify-end gap-4">
+                        <div class="w-1/2 font-medium text-sm text-[#34475E]">
+                            <p class="text-wrap md:text-nowrap lg:text-nowrap font-bold text-xs text-[#A7A7A7]">25 Aug,
+                                2022
+                                9:00 AM</p>
+                        </div>
+                        <div class="w-1/4 font-medium text-sm text-[#34475E]">
+                            <button
+                                class="bg-none text-[#FF7A00] flex flex-col md:flex-row lg:flex-row items-center justify-start text-xs font-bold text-center">
+                                <img src="/images/svgs/eye.svg" alt="eye" class="mr-1" />View
+                            </button>
+                        </div>
+                        <div class="w-1/4 font-medium text-sm text-[#34475E]">
+                            <button
+                                class="bg-none text-[#FF7A00] flex items-center justify-start text-xs font-bold text-center">
+                                Download
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+                <tr
+                    class="flex items-center justify-between w-full gap-5 py-4 px-10 border-b border-b-[#F3F5F6] overflow-auto">
+                    <td class="w-full text-sm text-[#34475E]">
+                        <p class="font-medium text-sm text-[#34475E]">Attached document 1</p>
                     </td>
                     <td class="w-1/3 flex items-center justify-end gap-4">
                         <div class="w-1/2 font-medium text-sm text-[#34475E]">
@@ -156,24 +206,9 @@
                     </td>
                 </tr>
 
+
             </tbody>
         </table>
     </div>
-
-    <script>
-        function toggleContent(event, target) {
-            document.querySelectorAll(".toggle-button").forEach((button) => {
-                button.classList.remove("text-[#FF7A00]", "border-b-2", "border-[#FF7A00]");
-                button.classList.add("text-[#9FA8AF]");
-            });
-
-            document.querySelectorAll(".content").forEach((content) => {
-                content.classList.add("hidden");
-            });
-
-            document.querySelector("." + target).classList.remove("hidden");
-            event.currentTarget.classList.add("text-[#FF7A00]", "border-b-2", "border-[#FF7A00]");
-        }
-    </script>
 
 </body>
