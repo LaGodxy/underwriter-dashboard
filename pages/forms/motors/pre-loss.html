@@ -24,29 +24,14 @@
 
 <!-- BODY -->
 <div class="mt-10 border rounded-md p-8 bg-[#FDFDFD]">
-    <h2 class="text-lg text-[#34475E] font-semibold mb-4 mt-0">Pre-Loss Inspection - Property</h2>
+    <h2 class="text-lg text-[#34475E] font-semibold mb-4 mt-0">Pre-Loss Link Generation</h2>
     <hr>
     <form class="mt-4">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 py-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 py-4">
             <div class="relative">
                 <label class="block text-sm font-medium text-[#344054] font-Mulish">Policy Number
                     (optional)</label>
                 <input type="text" class="mt-1 p-2 block w-full border border-gray-300 rounded-md pl-10" placeholder="">
-                <img src="/images/svgs/form-search-icon.svg" alt=""
-                    class="absolute top-2/3 left-3 tranform -translate-y-1/2">
-            </div>
-
-            <div class="relative">
-                <label class="block text-sm font-medium text-[#344054]">Insured For(optional)</label>
-                <input type="text" class="mt-1 p-2 block w-full border border-gray-300 rounded-md pl-10" placeholder="">
-                <img src="/images/svgs/form-search-icon.svg" alt=""
-                    class="absolute top-2/3 left-3 tranform -translate-y-1/2">
-            </div>
-            <div class="relative">
-                <label class="block text-sm font-medium text-[#344054]">Assign To</label>
-                <input type="text"
-                    class="mt-1 p-2 block w-full border border-gray-300 rounded-md placeholder-[#667085] pl-10"
-                    placeholder="Search a personnel">
                 <img src="/images/svgs/form-search-icon.svg" alt=""
                     class="absolute top-2/3 left-3 tranform -translate-y-1/2">
             </div>
@@ -56,19 +41,19 @@
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4 py-6">
             <div>
-                <label class="block text-sm font-medium text-[#344054]">Contact First Name</label>
+                <label class="block text-sm font-medium text-[#344054]">Client First Name</label>
                 <input type="text" class="mt-1 p-2 block w-full border border-gray-300 rounded-md" placeholder="">
             </div>
             <div>
-                <label class="block text-sm font-medium text-[#344054]">Contact Last Name</label>
+                <label class="block text-sm font-medium text-[#344054]">Client Last Name</label>
                 <input type="text" class="mt-1 p-2 block w-full border border-gray-300 rounded-md" placeholder="">
             </div>
             <div>
-                <label class="block text-sm font-medium text-[#344054]">Contact Phone Number</label>
+                <label class="block text-sm font-medium text-[#344054]">Client Phone Number</label>
                 <input type="text" class="mt-1 p-2 block w-full border border-gray-300 rounded-md" placeholder="+234">
             </div>
             <div>
-                <label class="block text-sm font-medium text-[#344054]">Contact Email Address</label>
+                <label class="block text-sm font-medium text-[#344054]">Client Email Address</label>
                 <input type="email" class="mt-1 p-2 block w-full border border-gray-300 rounded-md" placeholder="">
             </div>
         </div>
@@ -76,23 +61,23 @@
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-10 pb-6">
             <div>
-                <label class="block text-sm font-medium text-[#344054]">Risk House Number</label>
-                <input type="text" class="mt-1 p-2 block w-full border border-gray-300 rounded-md" placeholder="">
-            </div>
-            <div>
-                <label class="block text-sm font-medium text-[#344054]">Risk Address</label>
-                <input type="text" class="mt-1 p-2 block w-full border border-gray-300 rounded-md" placeholder="">
-            </div>
-            <div>
-                <label class="block text-sm font-medium text-[#344054]">State</label>
+                <label class="block text-sm font-medium text-[#344054]">Vehicle Make</label>
                 <select class="mt-1 p-2 block w-full border border-gray-300 rounded-md text-[#667085]">
-                    <option>Select a language</option>
+                    <option>Select a make</option>
                 </select>
             </div>
             <div>
-                <label class=" block text-sm font-medium text-[#344054]">LGA</label>
+                <label class="block text-sm font-medium text-[#344054]">Vehicle Model</label>
+                <input type="text" class="mt-1 p-2 block w-full border border-gray-300 rounded-md" placeholder="">
+            </div>
+            <div>
+                <label class="block text-sm font-medium text-[#344054]">Registration number</label>
+                <input type="text" class="mt-1 p-2 block w-full border border-gray-300 rounded-md" placeholder="">
+            </div>
+            <div>
+                <label class=" block text-sm font-medium text-[#344054]">Year</label>
                 <select class="mt-1 p-2 block w-full border border-gray-300 rounded-md text-[#667085]">
-                    <option>Select a language</option>
+                    <option>Select a year</option>
                 </select>
             </div>
         </div>
@@ -100,7 +85,7 @@
 
 
         <div class="py-6">
-            <label class="block text-sm font-medium text-[#344054] mb-4">Property Description</label>
+            <label class="block text-sm font-medium text-[#344054] mb-4">Comments</label>
             <textarea class="mt-1 p-2 block w-full border border-gray-300 rounded-md h-32"></textarea>
         </div>
 
@@ -109,8 +94,9 @@
         </div>
 
         <div class="flex justify-end">
+            <!-- TODO: FIX THE LOADPAGE URL -->
             <button type="button" class="bg-orange-500 text-white px-9 py-2 rounded-sm"
-                onclick="loadPage('/pages/rovenheight-properties.html', this)">Generate</button>
+                onclick="loadPage('/pages/rovenheight-properties.html', this)">Send Request</button>
         </div>
     </form>
 </div>

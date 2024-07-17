@@ -76,13 +76,49 @@
                 "initial-dynamic-button"));
         });
 
+        //CHANGE FORM P
+        let selectedFormType = '';
+
         function changeStyle(div) {
+            // Reset borders for all divs
+            const divs = document.querySelectorAll('.form-select-div');
+            divs.forEach(d => d.style.borderColor = "#e5e7eb"); // Reset to default border color
+
+            // Set border color for the clicked div
             div.style.borderColor = "#ff7a00";
+
             const externalButton = document.getElementById("external-button");
             externalButton.style.backgroundColor = "#ff7a00";
             externalButton.style.color = "#ffffff";
             externalButton.disabled = false;
+
+            // Determine the form type based on the clicked div
+            if (div.querySelector('img').src.includes('pre-loss-inspectino.svg')) {
+                selectedFormType = 'pre-loss';
+            } else if (div.querySelector('img').src.includes('post-loss-inspection.svg')) {
+                selectedFormType = 'post-loss';
+            }
+
+            // Update the button's onclick attribute to load the correct form URL
+            externalButton.onclick = function () {
+                loadForm(selectedFormType);
+            };
         }
+
+
+        function loadForm(type) {
+            let formUrl = '';
+
+            if (type === 'pre-loss') {
+                formUrl = '/pages/forms/property/pre-loss-property.html';
+            } else if (type === 'post-loss') {
+                formUrl = '/pages/forms/property/post-loss-property.html';
+            }
+
+            // Load the form page into the content area
+            loadPage(formUrl);
+        }
+
 
         document.getElementById("dropdown-toggle").addEventListener("click", function () {
             var dropdown = document.getElementById("dropdown-menu");
