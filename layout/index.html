@@ -57,7 +57,18 @@
                 <img src="/images/svgs/notification-icon.svg" alt="home" />
                 <img src="/images/svgs/AM.svg" alt="home" />
                 <span class="">Adesola</span>
-                <img src="/images/svgs/arrow-facing-down.svg" alt="home" />
+                <img src="/images/svgs/arrow-facing-down.svg" alt="home" class="cursor-pointer" id="dropdown-toggle" />
+                <div id="dropdown-menu"
+                    class="absolute right-0 top-full mt-2 bg-white border border-gray-200 shadow-lg hidden z-10">
+                    <p onclick="loadPage('/pages/dashboard.html', this)"
+                        class="px-4 py-2 cursor-pointer hover:bg-gray-100">Overview</p>
+                    <p onclick="loadPage('/pages/inspection-tables/all-requests.html', this)"
+                        class="px-4 py-2 cursor-pointer hover:bg-gray-100">Requests</p>
+                    <p onclick="loadPage('/pages/request-page.html', this)"
+                        class="px-4 py-2 cursor-pointer hover:bg-gray-100">Details</p>
+                    <p onclick="loadPage('/pages/surveyreports.html', this)"
+                        class="px-4 py-2 cursor-pointer hover:bg-gray-100">Survey Reports</p>
+                </div>
             </div>
         </header>
 
@@ -99,6 +110,20 @@
             // document.getElementById("overview-button").classList.remove("text-[#9FA8AF]");
             // document.getElementById("overview-button").querySelector('svg').classList.remove("text-[#9FA8AF]");
         });
+
+        // DROPDOWN
+        document.getElementById("dropdown-toggle").addEventListener("click", function () {
+            const dropdown = document.getElementById("dropdown-menu");
+            dropdown.classList.toggle("hidden");
+        });
+
+        window.addEventListener("click", function (e) {
+            if (!document.getElementById("dropdown-menu").contains(e.target) &&
+                !document.getElementById("dropdown-toggle").contains(e.target)) {
+                document.getElementById("dropdown-menu").classList.add("hidden");
+            }
+        });
+        // DROPDPWN ENDS
 
         // THIS WORKS
         let selectedFormType = '';
