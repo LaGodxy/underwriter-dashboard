@@ -27,14 +27,26 @@
         <a href="#" class="flex items-center"><img src="/images/lac-dashboard-logo.png" alt="logo" /></a>
         <span class="text-slate-500">TRM</span>
         <button onclick="loadPage('/pages/dashboard.html', this)"
-            class="mb-2 flex items-center justify-start text-[#FF7A00]">
-            <img src="/images/svgs/real-overview.svg" alt="home">
-            <span class="text-sm text-[#FF7A00] ml-3">Overview</span>
+            class="dynamic-button mb-2 flex items-center justify-start text-sm text-[#9FA8AF]" id="overview-button">
+            <svg width="23" height="20" viewBox="0 0 23 20" fill="none" xmlns="http://www.w3.org/2000/svg"
+                class="fill-current text-[#9FA8AF]">
+                <path
+                    d="M7.51492 18.2175H1.09375V4.59521H7.51492V18.2175ZM2.01106 17.4607H6.59761V5.35201H2.01106V17.4607Z" />
+                <path
+                    d="M22.1907 18.2175H15.7695V8.37915H22.1907V18.2175ZM16.6868 17.4607H21.2734V9.13594H16.6868V17.4607Z" />
+                <path d="M15 19H8V1H15V19ZM9 18.4375H14V1.5625H9V18.4375Z" />
+            </svg>
+            <span class="ml-3">Overview</span>
         </button>
+
         <button onclick="loadPage('/pages/inspection-tables/all-requests.html', this)"
-            class="mb-5 flex items-center dynamic-button">
-            <img src="/images/svgs/requests.svg" width="22px" height="18px" alt="">
-            <span class="text-sm text-[#9FA8AF] ml-3">Requests</span>
+            class="dynamic-button mb-2 flex items-center justify-start text-sm text-[#9FA8AF]" id="requests-button">
+            <svg width="22" height="17" viewBox="0 0 22 17" fill="none" xmlns="http://www.w3.org/2000/svg"
+                class="fill-current text-[#9FA8AF]">
+                <path
+                    d="M0.09375 0V17H21.1919V0H0.09375ZM5.05802 2.42857V4.85714H2.57588V2.42857H5.05802ZM2.57588 9.71429V7.28571H5.05802V9.71429H2.57588ZM2.57588 12.1429H5.05802V14.5714H2.57588V12.1429ZM18.7097 14.5714H7.54015V12.1429H18.7097V14.5714ZM18.7097 9.71429H7.54015V7.28571H18.7097V9.71429ZM18.7097 4.85714H7.54015V2.42857H18.7097V4.85714Z" />
+            </svg>
+            <span class="ml-3">Requests</span>
         </button>
     </aside>
 
@@ -61,64 +73,32 @@
                     document.getElementById("content").innerHTML = data;
                 });
 
-            // Remove the active class from all buttons
-            document.querySelectorAll(".dynamic-button").forEach((btn) => {
-                btn.classList.remove("active");
-            });
+            // Check if the button is either overview or requests
+            if (button.id === 'overview-button' || button.id === 'requests-button') {
+                // Remove the active class from all dynamic buttons
+                document.querySelectorAll(".dynamic-button").forEach((btn) => {
+                    btn.classList.remove("text-[#FF7A00]");
+                    btn.querySelector('svg').classList.remove("text-[#FF7A00]");
+                    btn.classList.add("text-[#9FA8AF]");
+                    btn.querySelector('svg').classList.add("text-[#9FA8AF]");
+                });
 
-            // Add the active class to the clicked button
-            // button.classList.add("active");
+                // Add the active class to the clicked button
+                button.classList.add("text-[#FF7A00]");
+                button.querySelector('svg').classList.add("text-[#FF7A00]");
+                button.classList.remove("text-[#9FA8AF]");
+                button.querySelector('svg').classList.remove("text-[#9FA8AF]");
+            }
         }
 
         // The default page loads
         document.addEventListener("DOMContentLoaded", function () {
-            loadPage("/pages/dashboard.html", document.getElementById(
-                "initial-dynamic-button"));
+            loadPage("/pages/dashboard.html", document.getElementById("overview-button"));
+            // document.getElementById("overview-button").classList.add("text-[#FF7A00]");
+            // document.getElementById("overview-button").querySelector('svg').classList.add("text-[#FF7A00]");
+            // document.getElementById("overview-button").classList.remove("text-[#9FA8AF]");
+            // document.getElementById("overview-button").querySelector('svg').classList.remove("text-[#9FA8AF]");
         });
-
-        //CHANGE FORM P
-        // let selectedFormType = '';
-
-        // function changeStyle(div) {
-        //     // Reset borders for all divs
-        //     const divs = document.querySelectorAll('.form-select-div');
-        //     divs.forEach(d => d.style.borderColor = "#e5e7eb"); // Reset to default border color
-
-        //     // Set border color for the clicked div
-        //     div.style.borderColor = "#ff7a00";
-
-        //     const externalButton = document.getElementById("external-button");
-        //     externalButton.style.backgroundColor = "#ff7a00";
-        //     externalButton.style.color = "#ffffff";
-        //     externalButton.disabled = false;
-
-        //     // Determine the form type based on the clicked div
-        //     if (div.querySelector('img').src.includes('pre-loss-inspectino.svg')) {
-        //         selectedFormType = 'pre-loss';
-        //     } else if (div.querySelector('img').src.includes('post-loss-inspection.svg')) {
-        //         selectedFormType = 'post-loss';
-        //     }
-
-        //     // Update the button's onclick attribute to load the correct form URL
-        //     externalButton.onclick = function () {
-        //         loadForm(selectedFormType);
-        //     };
-        // }
-
-
-        // function loadForm(type) {
-        //     let formUrl = '';
-
-        //     if (type === 'pre-loss') {
-        //         formUrl = '/pages/forms/property/pre-loss-property.html';
-        //     } else if (type === 'post-loss') {
-        //         formUrl = '/pages/forms/property/post-loss-property.html';
-        //     }
-
-        //     // Load the form page into the content area
-        //     loadPage(formUrl);
-        // }
-
 
         // THIS WORKS
         let selectedFormType = '';
