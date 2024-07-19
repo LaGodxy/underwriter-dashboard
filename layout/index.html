@@ -104,7 +104,8 @@
 
         // The default page loads
         document.addEventListener("DOMContentLoaded", function () {
-            loadPage("/pages/dashboard.html", document.getElementById("overview-button"));
+            loadPage("/pages/dashboard.html", document.getElementById(
+                "overview-button"));
             // document.getElementById("overview-button").classList.add("text-[#FF7A00]");
             // document.getElementById("overview-button").querySelector('svg').classList.add("text-[#FF7A00]");
             // document.getElementById("overview-button").classList.remove("text-[#9FA8AF]");
@@ -124,6 +125,16 @@
             }
         });
         // DROPDPWN ENDS
+
+        // MODAL
+        function showModal(id) {
+            document.getElementById(id).classList.remove('hidden');
+        }
+
+        function hideModal(id) {
+            document.getElementById(id).classList.add('hidden');
+        }
+        //END
 
         // THIS WORKS
         let selectedFormType = '';
